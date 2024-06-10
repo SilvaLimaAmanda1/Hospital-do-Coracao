@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
+html{
+	scroll-behavior: smooth;
+}
+:root{
+	--nav: #ffffff;
+	--menu-hover: #E20000;
+	--border-btn: #ff0000;
+	--cor-btn: #640b0b;
+	--card-red: #ea0000;
+	--menu: #030303;
+	--title: #111111;
+	--p: #292929;
+	--p-sobre: #f5f5f5;
+	--sobre-red: #b81414;
+	--main-cor: #fff0f5;
+	--footer: #8b0000;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:  "Convergência", sans-serif;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #E20000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8b0000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+a{
+	text-decoration: none;
+	color: var(--menu);
+	transition: color 0.3s ease; 
+}
+a:hover{
+	color: #E20000 !important;
+	text-decoration: overline;
+}
+li{
+	list-style: none;
+}
+nav .logo img{
+	width: 150px;
+	height: 150px;
+}
+nav{
+	background-color: var(--nav);
+	position: sticky;
+	top: 0;
+	padding: 0 85px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+	display: flex;
+	gap: 40px;
+}
+nav button{
+	color: var(--cor-btn);
+	background-color: transparent;
+	padding: 12px 16px;
+	border-radius: 5px;
+	border: 1px solid var(--cor-btn);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+nav button:hover{
+	background-color: var(--border-btn);
+	border-color: red;
+	color: #fff;
+}
+nav button#menuButton{
+	display: none;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	padding: 7px;
+}
+/*Main left texto*/
+.main{
+	background-color: var(--main-cor);
+	padding: 90px 85px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+}
+.main .left{
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+/*Main left title*/
+.main .left h3{
+	margin-top: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	color: var(--title);
+}
+strong{
+	color: #ea0000;
+}
+/*Main left ul and li*/
+.main .left ul{
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.main .left ul li{
+	color: var(--title);
+	letter-spacing: 2px;
+	font-weight: bold;
+	padding: 10px;
+}
+/*Main rigth img*/
+.main .rigth  img{
+	width: 600px;
+	margin-top: -990px;
+}
+/*Sobre*/
+.sobre{
+	background-color: var(--sobre-red);
+	padding: 90px 85px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+}
+.sobre .sobre-title{
+	color: var(--title);
+	font-size: 20px;
+	padding: 10px;
+}
+.sobre-text{
+	color: var(--p-sobre);
+	font-size: 18px;
+	padding: 10px;
+}
+.sobre .sobre-text ul{
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.sobre, .sobre-text ul li{
+	color: #EB9696;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-align: justify;
+	padding: 10px 10px 20px 20px;
+}
+/*Doações*/
+.doacoes{
+	background-color: var(--main-cor);
+	padding: 90px 85px;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+
+}
+.doacoes .doacoes-title{
+	color: var(--title);
+	font-size: 20px;
+	padding: 10px;
+}
+.doacoes-text{
+	color: var(--p);
+	font-size: 18px;
+	padding: 10px;
+}
+/*Depoimentos*/
+.dep{
+	padding: 0 80px;
+	margin: 40px 0 80px;
+	display: flex;
+	gap: 30px;
+}
+.dep .item{
+	background-color: var(--card-red);
+	display: flex;
+	align-items: center;
+	width: 25%;
+	padding: 14px;
+	gap: 14px;
+	border-radius: 18px;
+	cursor: pointer;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 1.10);
+	transition: all 0.5s ease;
+}
+.dep .item img{
+	width: 80px;
+	height: 80px;
+}
+.dep .item .info p{
+	font-size: 14px;
+	margin-top: 8px;
+}
+/*Contato*/
+.contato form {
+	display: flex;
+	flex-direction: column;
+}
+.contato, .title h3{
+	padding: 50px;
+}
+.contato form label {
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+.contato form input, .contato form textarea {
+	padding: 10px;
+	margin-top: 5px;
+	border: 1px solid var(--border-btn);
+	border-radius: 4px;
+	font-size: 16px;
+	width: 100%;
+}
+
+.contato form button {
+	margin-top: 10px;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: var(--cor-btn);
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.contato form button:hover {
+	background-color: #030303;
+}
+/*Footer*/
+footer {
+	background-color: var(--footer);
+	color: white;
+	padding: 40px 0;
+	text-align: center;
+	position: relative;
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.footer-logo img {
+	width: 150px;
+	margin-bottom: 20px;
+}
+.footer-social {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.footer-social a {
+	margin: 0 10px;
+	color: white;
+	font-size: 20px;
+	transition: transform 0.5s infinite alternate;
+}
+.footer-bottom {
+	margin-top: 20px;
+}
+
+.footer-bottom p {
+	font-size: 14px;
+}
+
+.footer-bottom p span {
+	color: #0cc0df;
+}
+         /*RESPOMSIVIDADE*/
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.main .left, .main .right {
+		width: 100%;
+	}
+
+	nav ul {
+		flex-direction: column;
+		display: none;
+		position: fixed;
+		background-color: var(--nav);
+		padding: 10px;
+		margin-top: 150px;
+		width: 100%;
+	}
+
+	nav ul.open {
+		display: block;
+	}
+
+	nav button#menuButton{
+		display: block;
+}
+
+	nav ul li {
+		margin: 10px 0;
+		text-align: center;
+	}
+}
